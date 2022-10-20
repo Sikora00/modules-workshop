@@ -18,6 +18,13 @@ export class Patron {
     this.booksOnHold.splice(index, 1);
   }
 
+  getSnapshot(): PatronSnapshot {
+    return {
+      id: this.id,
+      booksOnHold: this.booksOnHold,
+    };
+  }
+
   is(patron: Patron): boolean {
     return patron.id === this.id;
   }
@@ -33,4 +40,8 @@ export class Patron {
 
     this.booksOnHold.push(bookId);
   }
+}
+export interface PatronSnapshot {
+  id: string;
+  booksOnHold: string[];
 }
