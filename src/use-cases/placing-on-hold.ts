@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { InMemoryBookInstances } from '../persistance/in-memory-book-instances';
-import { InMemoryPatrons } from '../persistance/in-memory-patrons';
+import { InMemoryBookInstances } from '../persistance/in-memory/in-memory-book-instances';
+import { BookInstances } from './ports/book-instances';
+import { Patrons } from './ports/patrons';
 
 export interface PlaceOnHold {
   patronId: string;
@@ -10,8 +11,8 @@ export interface PlaceOnHold {
 @Injectable()
 export class PlacingOnHold {
   constructor(
-    private readonly findAvailableBook: InMemoryBookInstances,
-    private readonly patrons: InMemoryPatrons,
+    private readonly findAvailableBook: BookInstances,
+    private readonly patrons: Patrons,
   ) {}
 
   async execute(command: PlaceOnHold): Promise<void> {
