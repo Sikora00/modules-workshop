@@ -15,7 +15,21 @@ export class Book {
     return new BookInstance(this.generateRandomId(), this.isbn);
   }
 
+  getSnapshot(): BookSnapshot {
+    return {
+      isbn: this.isbn,
+      title: this.title,
+      author: this.author,
+    };
+  }
+
   private generateRandomId(): string {
     return (Math.random() + 1).toString(36).substring(7);
   }
+}
+
+export interface BookSnapshot {
+  isbn: string;
+  title: string;
+  author: string;
 }
