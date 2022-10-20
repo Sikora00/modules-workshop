@@ -1,12 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { Book } from 'src/model/book';
+import { Books } from 'src/use-cases/ports/books';
 
 @Injectable()
-export class InMemoryBooks {
+export class InMemoryBooks implements Books {
   private readonly books: Book[] = [];
 
-  async add(book: Book): Promise<void> {
+  async add(book: Book): Promise<Book> {
     this.books.push(book);
+    return book;
   }
 
   async findOrFail(isbn: string): Promise<Book> {

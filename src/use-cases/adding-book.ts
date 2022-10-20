@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Book } from 'src/model/book';
-import { InMemoryBooks } from 'src/persistance/in-memory-books';
+import { Books } from './ports/books';
 
 export interface AddBook {
   author: string;
@@ -10,9 +10,9 @@ export interface AddBook {
 
 @Injectable()
 export class AddingBook {
-  constructor(private readonly books: InMemoryBooks) {}
+  constructor(private readonly books: Books) {}
 
   async execute({ author, isbn, title }: AddBook): Promise<void> {
-    this.books.add(new Book(isbn, title, author));
+    await this.books.add(new Book(isbn, title, author));
   }
 }

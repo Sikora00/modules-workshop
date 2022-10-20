@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Patron } from '../model/patron';
+import { Patron } from 'src/model/patron';
+import { Patrons } from 'src/use-cases/ports/patrons';
 
 @Injectable()
-export class InMemoryPatrons {
+export class InMemoryPatrons implements Patrons {
   private readonly patrons: Patron[] = [];
 
   async save(patron: Patron): Promise<Patron> {

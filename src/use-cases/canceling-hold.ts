@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { InMemoryPatrons } from '../persistance/in-memory-patrons';
+import { Patrons } from './ports/patrons';
 
 export interface CancelHold {
   patronId: string;
@@ -8,7 +8,7 @@ export interface CancelHold {
 
 @Injectable()
 export class CancelingHold {
-  constructor(private readonly patrons: InMemoryPatrons) {}
+  constructor(private readonly patrons: Patrons) {}
 
   async execute(command: CancelHold): Promise<void> {
     const patron = await this.patrons.findOrFail(command.patronId);
