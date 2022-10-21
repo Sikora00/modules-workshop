@@ -1,6 +1,6 @@
 import { Logger } from '@nestjs/common';
 import { Command, CommandRunner, Option } from 'nest-commander';
-import { AddingBookInstance } from 'src/use-cases/adding-book-instance';
+import { AddingBookInstance } from '../use-cases/adding-book-instance';
 
 interface AddBookInstanceOptions {
   isbn: string;

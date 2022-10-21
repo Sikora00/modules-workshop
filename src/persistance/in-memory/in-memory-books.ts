@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { Books } from 'src/catalogue/use-cases/ports/books';
 import { Book } from 'src/model/book';
-import { Books } from 'src/use-cases/ports/books';
 
 @Injectable()
 export class InMemoryBooks implements Books {
