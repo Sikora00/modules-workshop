@@ -1,10 +1,9 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { BookInstance } from 'src/model/book-instance';
-import { CancelingHold } from 'src/use-cases/canceling-hold';
-import { PlacingOnHold } from 'src/use-cases/placing-on-hold';
+import { CancelingHold } from 'src/lending/use-cases/canceling-hold';
+import { PlacingOnHold } from 'src/lending/use-cases/placing-on-hold';
 
 @Controller()
-export class LibraryController {
+export class LendingController {
   constructor(
     private readonly cancelingHold: CancelingHold,
     private readonly placingOnHold: PlacingOnHold,

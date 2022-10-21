@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { Patron, PatronSnapshot } from 'src/model/patron';
-import { Patrons } from 'src/use-cases/ports/patrons';
+import { Patron, PatronSnapshot } from 'src/lending/model/patron';
+import { Patrons } from 'src/lending/use-cases/ports/patrons';
 import {
   factoryToken,
   JsonFileReadWrite,

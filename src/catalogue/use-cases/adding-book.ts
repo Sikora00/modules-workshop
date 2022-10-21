@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Book } from 'src/model/book';
+import { Book } from 'src/catalogue/model/book';
 import { Books } from './ports/books';
 
 export interface AddBook {

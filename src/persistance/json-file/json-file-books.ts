@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Books } from 'src/catalogue/use-cases/ports/books';
-import { Book, BookSnapshot } from 'src/model/book';
+import { Book, BookSnapshot } from 'src/catalogue/model/book';
 import {
   factoryToken,
   JsonFileReadWrite,

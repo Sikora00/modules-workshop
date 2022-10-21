@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Patron } from 'src/model/patron';
-import { Patrons } from 'src/use-cases/ports/patrons';
+import { Patron } from 'src/lending/model/patron';
+import { Patrons } from 'src/lending/use-cases/ports/patrons';
 
 @Injectable()
 export class InMemoryPatrons implements Patrons {

@@ -1,4 +1,4 @@
-import { Patron } from 'src/model/patron';
+import { Patron } from 'src/lending/model/patron';
 
 export abstract class Patrons {
   abstract findOrCreate(patronId: string): Promise<Patron>;

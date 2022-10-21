@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { Books } from 'src/catalogue/use-cases/ports/books';
-import { BookInstances } from 'src/use-cases/ports/book-instances';
-import { Patrons } from 'src/use-cases/ports/patrons';
+import { BookInstances } from 'src/lending/use-cases/ports/book-instances';
+import { Patrons } from 'src/lending/use-cases/ports/patrons';
 import { InMemoryBookInstances } from './in-memory-book-instances';
 import { InMemoryBooks } from './in-memory-books';
 import { InMemoryPatrons } from './in-memory-patrons';

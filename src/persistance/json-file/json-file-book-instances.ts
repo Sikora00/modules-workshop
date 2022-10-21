@@ -1,6 +1,9 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { BookInstance, BookInstanceSnapshot } from 'src/model/book-instance';
-import { BookInstances } from 'src/use-cases/ports/book-instances';
+import {
+  BookInstance,
+  BookInstanceSnapshot,
+} from 'src/catalogue/model/book-instance';
+import { BookInstances } from 'src/lending/use-cases/ports/book-instances';
 import {
   factoryToken,
   JsonFileReadWrite,

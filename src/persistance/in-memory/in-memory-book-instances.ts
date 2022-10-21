@@ -1,5 +1,5 @@
-import { BookInstances } from 'src/use-cases/ports/book-instances';
-import { BookInstance } from '../../model/book-instance';
+import { BookInstances } from 'src/lending/use-cases/ports/book-instances';
+import { BookInstance } from '../../catalogue/model/book-instance';
 
 export class InMemoryBookInstances implements BookInstances {
   private readonly books: BookInstance[] = [];

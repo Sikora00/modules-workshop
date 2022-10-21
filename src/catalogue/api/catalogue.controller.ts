@@ -1,5 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { BookInstance } from 'src/model/book-instance';
+import { BookInstance } from 'src/catalogue/model/book-instance';
 import { AddingBook } from '../use-cases/adding-book';
 import { AddingBookInstance } from '../use-cases/adding-book-instance';
 

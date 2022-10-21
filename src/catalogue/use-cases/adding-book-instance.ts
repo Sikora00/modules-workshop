@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { BookInstance } from 'src/model/book-instance';
+import { BookInstance } from 'src/catalogue/model/book-instance';
 import { InMemoryBookInstances } from 'src/persistance/in-memory/in-memory-book-instances';
 import { InMemoryBooks } from 'src/persistance/in-memory/in-memory-books';
 import { BookInstances } from './ports/book-instances';

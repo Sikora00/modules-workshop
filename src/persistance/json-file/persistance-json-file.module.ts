@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { Books } from 'src/catalogue/use-cases/ports/books';
-import { BookInstances } from 'src/use-cases/ports/book-instances';
-import { Patrons } from 'src/use-cases/ports/patrons';
+import { BookInstances } from 'src/lending/use-cases/ports/book-instances';
+import { Patrons } from 'src/lending/use-cases/ports/patrons';
 import { JsonFileBookInstances } from './json-file-book-instances';
 import { JsonFileBooks } from './json-file-books';
 import { JsonFilePatrons } from './json-file-patrons';
